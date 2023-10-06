@@ -36,7 +36,12 @@ struct LoginEmailView: View {
                     .padding(.bottom, 2)
                 
                 TextField("Ingresá tu correo electrónico", text: $textFieldEmail)
-                TextField("Ingresá tu contraseña", text: $textFieldPassword)
+                    .keyboardType(.emailAddress)
+                    .textInputAutocapitalization(.never)
+                    .autocorrectionDisabled(true)
+                SecureField("Ingresá tu contraseña", text: $textFieldPassword)
+                    .textInputAutocapitalization(.never)
+                    .autocorrectionDisabled(true)
                 
                 Button("Login") {
                     authenticationViewModel.login(

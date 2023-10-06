@@ -36,7 +36,12 @@ struct RegisterEmailView: View {
                     .padding(.bottom, 2)
                 
                 TextField("Ingresá tu correo electrónico", text: $textFieldEmail)
+                    .keyboardType(.emailAddress)
+                    .textInputAutocapitalization(.never)
+                    .autocorrectionDisabled(true)
                 TextField("Ingresá tu contraseña", text: $textFieldPassword)
+                    .textInputAutocapitalization(.never)
+                    .autocorrectionDisabled(true)
                 
                 Button("Aceptar") {
                     authenticationViewModel.createNewUser(
