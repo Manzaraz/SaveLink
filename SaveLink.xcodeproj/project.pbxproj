@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		612EC9042AD3874C0028C3EC /* FacebookLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 612EC9032AD3874C0028C3EC /* FacebookLogin */; };
+		612EC9082AD38C3A0028C3EC /* FacebookAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612EC9072AD38C3A0028C3EC /* FacebookAuthentication.swift */; };
 		618654E12ACFC0E5000D8FB3 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 618654E02ACFC0E5000D8FB3 /* FirebaseAuth */; };
 		618654E42ACFC15A000D8FB3 /* AuthenticationFirebaseDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618654E32ACFC15A000D8FB3 /* AuthenticationFirebaseDatasource.swift */; };
 		618654E62ACFC2F7000D8FB3 /* AuthenticationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618654E52ACFC2F7000D8FB3 /* AuthenticationRepository.swift */; };
@@ -27,6 +28,7 @@
 
 /* Begin PBXFileReference section */
 		612EC9052AD387C10028C3EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		612EC9072AD38C3A0028C3EC /* FacebookAuthentication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacebookAuthentication.swift; sourceTree = "<group>"; };
 		618654E32ACFC15A000D8FB3 /* AuthenticationFirebaseDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationFirebaseDatasource.swift; sourceTree = "<group>"; };
 		618654E52ACFC2F7000D8FB3 /* AuthenticationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationRepository.swift; sourceTree = "<group>"; };
 		618654E72ACFC3E2000D8FB3 /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
@@ -57,6 +59,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		612EC9062AD38BA90028C3EC /* FacebookAuthentication */ = {
+			isa = PBXGroup;
+			children = (
+				612EC9072AD38C3A0028C3EC /* FacebookAuthentication.swift */,
+			);
+			path = FacebookAuthentication;
+			sourceTree = "<group>";
+		};
 		618654DF2ACFC0E5000D8FB3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -127,8 +137,9 @@
 		61B66C412AD05A0100A6F636 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
-				618654E32ACFC15A000D8FB3 /* AuthenticationFirebaseDatasource.swift */,
 				618654E52ACFC2F7000D8FB3 /* AuthenticationRepository.swift */,
+				618654E32ACFC15A000D8FB3 /* AuthenticationFirebaseDatasource.swift */,
+				612EC9062AD38BA90028C3EC /* FacebookAuthentication */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -217,6 +228,7 @@
 				61B66C3F2AD054DE00A6F636 /* HomeView.swift in Sources */,
 				61A2205B2ACF2CC8002DDAE2 /* AuthenticationView.swift in Sources */,
 				618654E42ACFC15A000D8FB3 /* AuthenticationFirebaseDatasource.swift in Sources */,
+				612EC9082AD38C3A0028C3EC /* FacebookAuthentication.swift in Sources */,
 				61A220722ACFB980002DDAE2 /* DismissView.swift in Sources */,
 				61A2206E2ACFB096002DDAE2 /* LoginEmailView.swift in Sources */,
 				618654E82ACFC3E2000D8FB3 /* AuthenticationViewModel.swift in Sources */,

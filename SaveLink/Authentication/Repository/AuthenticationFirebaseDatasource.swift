@@ -13,6 +13,8 @@ struct User {
 }
 
 final class AuthenticationFirebaseDatasource {
+    private let facebookAuthentication = FacebookAuthentication()
+
     func getCurrentUser() -> User? {
         guard let email = Auth.auth().currentUser?.email else { return nil }
         
@@ -47,7 +49,27 @@ final class AuthenticationFirebaseDatasource {
         }
     }
     
-    
+    func loginWithFacebook(completionBlock: @escaping (Result <User, Error>) -> Void)  {
+        facebookAuthentication.loginFacebook { result in
+            switch result {
+            case .success(let accessToken):
+                let credential = FacebookAuthProvider.credential(withAccessToken: accessToken)
+                Auth.auth().signIn(with: credential) { authDataResult, error in
+                    if let error = error {
+                        print("Error creating a new user \(error.localizedDescription)")
+                        completionBlock(.failure(error))
+                        return
+                    }
+                    let email = authDataResult?.user.email ?? "No email"
+                    print("New user created with info \(email)")
+                    completionBlock(.success(.init(email: email)))
+                }
+            case .failure(let error):
+                print("Error SignIn with Facebook \(error.localizedDescription)")
+                completionBlock(.failure(error))
+            }
+        }
+    }
     
     func logout() throws {
         try Auth.auth().signOut()
