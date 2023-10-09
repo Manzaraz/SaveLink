@@ -10,6 +10,9 @@ import Foundation
 final class AuthenticationViewModel: ObservableObject {
     @Published var user: User?
     @Published var messageError: String?
+    @Published var linkedAccounts: [LinkedAccounts] = []
+    @Published var showAlert: Bool = false
+    @Published var isAccountLinked: Bool = false
     
     private let authenticationRepository: AuthenticationRepository
     
@@ -59,9 +62,6 @@ final class AuthenticationViewModel: ObservableObject {
             }
     }
     
-    
-    
-    
     func logout() {
         do {
             try authenticationRepository.logout()
@@ -70,4 +70,38 @@ final class AuthenticationViewModel: ObservableObject {
             print("Error logout")
         }
     }
+    
+    func getCurrentProvider() {
+        linkedAccounts = authenticationRepository.getCurrentProvider()
+        
+        print("User Provider \(linkedAccounts)")
+    }
+    
+    func isEmailAndPasswordLinked() -> Bool {
+        linkedAccounts.contains { $0.rawValue == "password" }
+    }
+    
+    func isFacebookLinked() -> Bool {
+        linkedAccounts.contains { $0.rawValue == "facebook.com" }
+    }
+    
+    func linkFacebook() {
+        authenticationRepository.linkFacebook { [weak self ] isSuccess in
+            print("Linked Facebook \(isSuccess.description)")
+            self?.isAccountLinked = isSuccess
+            self?.showAlert.toggle()
+            self?.getCurrentProvider()
+        }
+    }
+    
+    func linkEmailAndPassword(email: String, password: String) {
+        authenticationRepository.linkEmailAndPassword(email: email, password: password) { [weak self] isSuccess in
+            print("Linked Email and Passwrod \(isSuccess.description)")
+            
+            self?.isAccountLinked = isSuccess
+            self?.showAlert.toggle()
+            self?.getCurrentProvider()
+        }
+    }
+    
 }

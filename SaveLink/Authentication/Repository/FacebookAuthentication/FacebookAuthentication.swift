@@ -22,4 +22,8 @@ final class FacebookAuthentication {
             completionBlock(.success(token ?? "Empty Token"))
         }
     }
+    
+    func getAccessToken() -> String? {
+        AccessToken.current?.tokenString
+    }
 }

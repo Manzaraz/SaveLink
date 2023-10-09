@@ -62,6 +62,7 @@ struct LoginEmailView: View {
             }
             .textFieldStyle(.roundedBorder)
             .padding(.horizontal, 64)
+            
             Spacer()
         }
     }

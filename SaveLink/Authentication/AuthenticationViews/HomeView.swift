@@ -12,10 +12,21 @@ struct HomeView: View {
     
     var body: some View {
         NavigationView {
-            VStack {
-                Text("Bienvenido \(authenticationViewModel.user?.email ?? "No user")")
-                    .padding(.top, 32)
-                Spacer()
+            TabView {
+                VStack {
+                    Text("Bienvenido \(authenticationViewModel.user?.email ?? "No user")")
+                        .padding(.top, 32)
+                    Spacer()
+                }
+                .tabItem {
+                    Label("Home", systemImage: "house.fill")
+                }
+                
+                ProfileView(authenticationViewModel: authenticationViewModel)
+                    .tabItem {
+                        Label("Person", systemImage: "person.fill")
+                    }
+                
             }
             .navigationBarTitleDisplayMode(.inline)
             .navigationTitle("Home")
