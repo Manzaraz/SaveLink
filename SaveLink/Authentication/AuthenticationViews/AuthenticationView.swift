@@ -35,6 +35,14 @@ struct AuthenticationView: View {
                     Label("Entrá con Email", systemImage: "envelope.fill")
                 }
                 .tint(.black)
+                
+                Button {
+                    authenticationViewModel.loginFacebook()
+                } label: {
+                    Label("Entrá con Facebook", image: "Facebook")
+                }
+                .tint(.blue)
+                
             }
             .controlSize(.large)
             .buttonStyle(.bordered)
