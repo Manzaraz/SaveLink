@@ -26,4 +26,15 @@ final class LinkViewModel: ObservableObject {
             }
         }
     }
+    
+    func createNewLink(fromURL url: String) {
+        linkRepository.createNewLink(withURL: url) { [weak self] result in
+            switch result {
+            case .success(let link):
+                self?.links.append(link)
+            case .failure(let error):
+                self? .messageError = error.localizedDescription            
+            }
+        }
+    }
 }
