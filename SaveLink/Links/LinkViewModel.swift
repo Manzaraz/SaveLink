@@ -60,6 +60,9 @@ final class LinkViewModel: ObservableObject {
         linkRepository.updateLink(link: updatedLink)
     }
     
+    func deleteLink(link: LinkModel) {
+        linkRepository.deleteLink(link: link)
+    }
     
     
 }

@@ -67,18 +67,28 @@ struct LinkView: View {
                     }
                     .swipeActions(edge: .trailing) {
                         Button(action: {
-                            linkViewModel.updateIsFavorited(link: link)
-                        }, label: {
-                            Label("Favorito", systemImage: "star.fill")
-                        })
-                        .tint(.yellow)
-                        
-                        Button(action: {
                             linkViewModel.updateIscompleted(link: link)
                         }, label: {
                             Label("Completado", systemImage: "checkmark.circle.fill")
                         })
                         .tint(.green)
+                        
+                        Button(action: {
+                            linkViewModel.updateIsFavorited(link: link)
+                        }, label: {
+                            Label("Favorito", systemImage: "star.fill")
+                        })
+                        .tint(.yellow)
+                    } 
+                    .swipeActions(edge: .leading) {
+                        Button(action: {
+                            linkViewModel.deleteLink(link: link)
+                        }, label: {
+                            Label("Borrar", systemImage: "trash.fill")
+                        })
+                        .tint(.red)
+                        
+                
                     }
                 }
             }

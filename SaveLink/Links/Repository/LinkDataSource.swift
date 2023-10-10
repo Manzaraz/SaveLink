@@ -60,4 +60,10 @@ final class LinkDataSource {
             print("Error updating link in our database")
         }
     }
+    
+    func deleteLink( link: LinkModel) {
+        guard let documentId = link.id else { return  }
+        
+        database.collection(collection).document(documentId).delete()
+    }
 }

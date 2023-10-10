@@ -38,4 +38,9 @@ final class LinkRepository {
         linkDataSource.updateLink(link: link)
     }
     
+    func deleteLink(link: LinkModel) {
+        linkDataSource.deleteLink(link: link)
+    }
+    
+    
 }
