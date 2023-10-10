@@ -17,4 +17,6 @@ final class LinkRepository {
     func getAllLinks(completionBlock: @escaping (Result<[LinkModel], Error>) -> Void) {
         linkDataSource.getAllLinks(completionBlock: completionBlock)
     }
+    
+    
 }

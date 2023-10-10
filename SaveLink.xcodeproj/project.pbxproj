@@ -32,6 +32,7 @@
 		61D62A1F2AD4D5BB0019A8EC /* LinkViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D62A1E2AD4D5BB0019A8EC /* LinkViewModel.swift */; };
 		61D62A222AD4D5E10019A8EC /* LinkRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D62A212AD4D5E10019A8EC /* LinkRepository.swift */; };
 		61D62A242AD4D5F70019A8EC /* LinkDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D62A232AD4D5F70019A8EC /* LinkDataSource.swift */; };
+		61D62A262AD4E3960019A8EC /* LinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D62A252AD4E3960019A8EC /* LinkView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		61D62A1E2AD4D5BB0019A8EC /* LinkViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkViewModel.swift; sourceTree = "<group>"; };
 		61D62A212AD4D5E10019A8EC /* LinkRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkRepository.swift; sourceTree = "<group>"; };
 		61D62A232AD4D5F70019A8EC /* LinkDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkDataSource.swift; sourceTree = "<group>"; };
+		61D62A252AD4E3960019A8EC /* LinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				61B66C3E2AD054DE00A6F636 /* HomeView.swift */,
+				61D62A252AD4E3960019A8EC /* LinkView.swift */,
 				61D62A1E2AD4D5BB0019A8EC /* LinkViewModel.swift */,
 				61D62A202AD4D5C90019A8EC /* Repository */,
 			);
@@ -285,6 +288,7 @@
 				618654E82ACFC3E2000D8FB3 /* AuthenticationViewModel.swift in Sources */,
 				61D62A1F2AD4D5BB0019A8EC /* LinkViewModel.swift in Sources */,
 				61A220702ACFB83D002DDAE2 /* RegisterEmailView.swift in Sources */,
+				61D62A262AD4E3960019A8EC /* LinkView.swift in Sources */,
 				61A220592ACF2CC8002DDAE2 /* SaveLinkApp.swift in Sources */,
 				61D62A132AD45BCD0019A8EC /* ProfileView.swift in Sources */,
 				61D62A162AD45F1E0019A8EC /* LinkedAccounts.swift in Sources */,
