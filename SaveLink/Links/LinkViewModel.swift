@@ -37,4 +37,29 @@ final class LinkViewModel: ObservableObject {
             }
         }
     }
+    
+    func updateIsFavorited(link: LinkModel) {
+        let updatedLink = LinkModel(
+            id: link.id,
+            url: link.url,
+            title: link.title,
+            isFavorited: link.isFavorited ? false : true,
+            isCompleted: link.isCompleted)
+        
+        linkRepository.updateLink(link: updatedLink)
+    }
+    
+    func updateIscompleted(link: LinkModel) {
+        let updatedLink = LinkModel(
+            id: link.id,
+            url: link.url,
+            title: link.title,
+            isFavorited: link.isFavorited,
+            isCompleted: link.isCompleted ? false : true)
+        
+        linkRepository.updateLink(link: updatedLink)
+    }
+    
+    
+    
 }

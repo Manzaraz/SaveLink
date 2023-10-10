@@ -49,6 +49,15 @@ final class LinkDataSource {
         } catch  {
             completionBlock(.failure(error))
         }
+    }
+    
+    func updateLink(link: LinkModel) {
+        guard let documentId = link.id else { return }
         
+        do {
+            _ = try database.collection(collection).document(documentId).setData(from: link)
+        } catch {
+            print("Error updating link in our database")
+        }
     }
 }

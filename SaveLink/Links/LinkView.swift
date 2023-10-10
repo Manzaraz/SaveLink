@@ -23,6 +23,7 @@ struct LinkView: View {
                 .cornerRadius(3)
             Button {
                 linkViewModel.createNewLink(fromURL: text)
+                text = ""
             } label: {
                 Label("Crear Link", systemImage: "link")
             }
@@ -63,6 +64,21 @@ struct LinkView: View {
                                     .frame(width: 10, height: 10)
                             }
                         }
+                    }
+                    .swipeActions(edge: .trailing) {
+                        Button(action: {
+                            linkViewModel.updateIsFavorited(link: link)
+                        }, label: {
+                            Label("Favorito", systemImage: "star.fill")
+                        })
+                        .tint(.yellow)
+                        
+                        Button(action: {
+                            linkViewModel.updateIscompleted(link: link)
+                        }, label: {
+                            Label("Completado", systemImage: "checkmark.circle.fill")
+                        })
+                        .tint(.green)
                     }
                 }
             }
