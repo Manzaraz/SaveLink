@@ -31,9 +31,9 @@ final class LinkViewModel: ObservableObject {
         linkRepository.createNewLink(withURL: url) { [weak self] result in
             switch result {
             case .success(let link):
-                self?.links.append(link)
+                print("✅ New link \(link.title) added")
             case .failure(let error):
-                self? .messageError = error.localizedDescription            
+                self? .messageError = error.localizedDescription
             }
         }
     }
