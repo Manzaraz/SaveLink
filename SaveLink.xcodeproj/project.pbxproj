@@ -34,6 +34,7 @@
 		61D62A242AD4D5F70019A8EC /* LinkDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D62A232AD4D5F70019A8EC /* LinkDataSource.swift */; };
 		61D62A262AD4E3960019A8EC /* LinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D62A252AD4E3960019A8EC /* LinkView.swift */; };
 		61D62A282AD4EF980019A8EC /* MetadataDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D62A272AD4EF980019A8EC /* MetadataDatasource.swift */; };
+		61D62A2A2AD590340019A8EC /* Tracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61D62A292AD590340019A8EC /* Tracker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,7 @@
 		61D62A232AD4D5F70019A8EC /* LinkDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkDataSource.swift; sourceTree = "<group>"; };
 		61D62A252AD4E3960019A8EC /* LinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkView.swift; sourceTree = "<group>"; };
 		61D62A272AD4EF980019A8EC /* MetadataDatasource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetadataDatasource.swift; sourceTree = "<group>"; };
+		61D62A292AD590340019A8EC /* Tracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tracker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +132,7 @@
 				61D62A1D2AD4D4E30019A8EC /* Links */,
 				61A220712ACFB980002DDAE2 /* DismissView.swift */,
 				61D62A122AD45BCD0019A8EC /* ProfileView.swift */,
+				61D62A292AD590340019A8EC /* Tracker.swift */,
 				61A2206B2ACF392F002DDAE2 /* GoogleService-Info.plist */,
 				61A2205C2ACF2CCC002DDAE2 /* Assets.xcassets */,
 				61A2205E2ACF2CCC002DDAE2 /* Preview Content */,
@@ -281,6 +284,7 @@
 			files = (
 				61D62A182AD45FC60019A8EC /* User.swift in Sources */,
 				61B66C3F2AD054DE00A6F636 /* HomeView.swift in Sources */,
+				61D62A2A2AD590340019A8EC /* Tracker.swift in Sources */,
 				61D62A222AD4D5E10019A8EC /* LinkRepository.swift in Sources */,
 				61A2205B2ACF2CC8002DDAE2 /* AuthenticationView.swift in Sources */,
 				618654E42ACFC15A000D8FB3 /* AuthenticationFirebaseDatasource.swift in Sources */,
