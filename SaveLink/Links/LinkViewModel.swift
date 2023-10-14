@@ -28,12 +28,21 @@ final class LinkViewModel: ObservableObject {
     }
     
     func createNewLink(fromURL url: String) {
+        Tracker.trackCreateLinkEvent(url: url )
+        
         linkRepository.createNewLink(withURL: url) { [weak self] result in
             switch result {
             case .success(let link):
                 print("✅ New link \(link.title) added")
+                
+                Tracker.trackerSaveLinkEvent()
+                
             case .failure(let error):
-                self? .messageError = error.localizedDescription
+                DispatchQueue.main.async {                    
+                    self? .messageError = error.localizedDescription
+                
+                    Tracker.trackErrorSaveLinkEvent(error: error.localizedDescription)
+                }
             }
         }
     }

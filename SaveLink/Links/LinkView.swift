@@ -22,8 +22,10 @@ struct LinkView: View {
                 .padding(.horizontal, 12)
                 .cornerRadius(3)
             Button {
-                linkViewModel.createNewLink(fromURL: text)
-                text = ""
+                if !text.isEmpty {
+                    linkViewModel.createNewLink(fromURL: text)
+                    text = ""
+                }
             } label: {
                 Label("Crear Link", systemImage: "link")
             }
