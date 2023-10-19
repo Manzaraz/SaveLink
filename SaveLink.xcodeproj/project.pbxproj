@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		612EC9042AD3874C0028C3EC /* FacebookLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 612EC9032AD3874C0028C3EC /* FacebookLogin */; };
 		612EC9082AD38C3A0028C3EC /* FacebookAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 612EC9072AD38C3A0028C3EC /* FacebookAuthentication.swift */; };
+		613026B12AE1AF3000265A00 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 613026B02AE1AF3000265A00 /* FirebaseCrashlytics */; };
 		618654E12ACFC0E5000D8FB3 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 618654E02ACFC0E5000D8FB3 /* FirebaseAuth */; };
 		618654E42ACFC15A000D8FB3 /* AuthenticationFirebaseDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618654E32ACFC15A000D8FB3 /* AuthenticationFirebaseDatasource.swift */; };
 		618654E62ACFC2F7000D8FB3 /* AuthenticationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 618654E52ACFC2F7000D8FB3 /* AuthenticationRepository.swift */; };
@@ -72,6 +73,7 @@
 				612EC9042AD3874C0028C3EC /* FacebookLogin in Frameworks */,
 				61A2206A2ACF31EE002DDAE2 /* FirebaseAnalyticsSwift in Frameworks */,
 				618654E12ACFC0E5000D8FB3 /* FirebaseAuth in Frameworks */,
+				613026B12AE1AF3000265A00 /* FirebaseCrashlytics in Frameworks */,
 				61D62A1A2AD4D4AF0019A8EC /* FirebaseFirestore in Frameworks */,
 				61A220682ACF31EE002DDAE2 /* FirebaseAnalytics in Frameworks */,
 				61D62A1C2AD4D4AF0019A8EC /* FirebaseFirestoreSwift in Frameworks */,
@@ -222,6 +224,7 @@
 				612EC9032AD3874C0028C3EC /* FacebookLogin */,
 				61D62A192AD4D4AF0019A8EC /* FirebaseFirestore */,
 				61D62A1B2AD4D4AF0019A8EC /* FirebaseFirestoreSwift */,
+				613026B02AE1AF3000265A00 /* FirebaseCrashlytics */,
 			);
 			productName = SaveLink;
 			productReference = 61A220552ACF2CC8002DDAE2 /* SaveLink.app */;
@@ -541,6 +544,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 612EC9022AD3874C0028C3EC /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
 			productName = FacebookLogin;
+		};
+		613026B02AE1AF3000265A00 /* FirebaseCrashlytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 61A220662ACF31EE002DDAE2 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCrashlytics;
 		};
 		618654E02ACFC0E5000D8FB3 /* FirebaseAuth */ = {
 			isa = XCSwiftPackageProductDependency;
